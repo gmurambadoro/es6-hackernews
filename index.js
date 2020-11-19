@@ -45,8 +45,8 @@ function articlesMarkup(articles) {
     return articles.length ? articles.map(article => {
             return `
 <article>
-    <h5>${article.title} <small><span class="badge badge-danger">${article.by}</span></small></h5>
-    <p class="text-muted small text-light"><a href="${article.url}" target="_blank">${article.url}</a></p>
+    <h5>${article.title} <small> <span class="badge badge-secondary"><i class="fas fa-comments"></i> ${article.descendants} Comments</span> <span class="badge badge-danger"><i class="fas fa-user"></i> ${article.by}</span></small></h5>
+    <p class="text-muted small text-light"><i class="fas fa-link"></i> <a href="${article.url}" target="_blank">${article.url}</a></p>
 </article>  `
         }).join('')
         :
